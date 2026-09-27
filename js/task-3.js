@@ -1,22 +1,24 @@
 class StringBuilder {
+  #value;
+
   constructor(value) {
-    this.startValue = value;
+    this.#value = value;
   }
 
   getValue() {
-    return this.startValue;
+    return this.#value;
   }
 
   padStart(complement) {
-    this.startValue = complement + this.startValue;
+    this.#value = complement + this.#value;
   }
 
   padEnd(complement) {
-    this.startValue = this.startValue + complement;
+    this.#value = this.#value + complement;
   }
 
   padBoth(complement) {
-    this.startValue = complement + this.startValue + complement;
+    this.#value = complement + this.#value + complement;
   }
 }
 
